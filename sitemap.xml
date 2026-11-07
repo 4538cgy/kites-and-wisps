@@ -12,4 +12,8 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://kites-and-wisps.web.app/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://kites-and-wisps.web.app/en/"/>
   </url>
+  <url>
+    <loc>https://kites-and-wisps.web.app/privacy</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
 </urlset>
