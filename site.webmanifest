@@ -1,0 +1,9 @@
+{
+  "name": "연과 도깨비불 (Kites & Wisps)",
+  "short_name": "연과 도깨비불",
+  "icons": [{ "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }, { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }],
+  "theme_color": "#f4ecdc",
+  "background_color": "#f4ecdc",
+  "display": "browser",
+  "lang": "ko"
+}

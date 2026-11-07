@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>연과 도깨비불 — 걸어서 다시 그리는 동양 판타지 도트 RPG</title>
+<meta name="description" content="먹물 안개에 지워진 세상을 백지 지도 한 장과 연, 도깨비불과 함께 걸어서 다시 그리는 실시간 온라인 도트 RPG. 레벨 없이 스킬로 성장하고, 모바일과 Steam에서 함께 모험합니다.">
+<meta name="theme-color" content="#f4ecdc">
+<!-- 대표 주소 = Firebase Hosting. 도메인을 바꾸면 모든 https://kites-and-wisps.web.app 를 함께 바꾼다 (랜딩_페이지.md 6절) -->
+<link rel="canonical" href="https://kites-and-wisps.web.app/">
+<link rel="alternate" hreflang="ko" href="https://kites-and-wisps.web.app/">
+<link rel="alternate" hreflang="en" href="https://kites-and-wisps.web.app/en/">
+<link rel="alternate" hreflang="x-default" href="https://kites-and-wisps.web.app/en/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="연과 도깨비불">
+<meta property="og:title" content="연과 도깨비불 — 걸어서 다시 그리는 동양 판타지 도트 RPG">
+<meta property="og:description" content="지워진 대륙을 백지 지도로 다시 그리는 유랑자의 이야기. 레벨 없이, 할 줄 아는 것을 늘려 가며.">
+<meta property="og:url" content="https://kites-and-wisps.web.app/">
+<meta property="og:image" content="https://kites-and-wisps.web.app/assets/img/og_1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="먹으로 그린 마을과 연, 도깨비불 위에 붓글씨 제목 「연과 도깨비불」">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="연과 도깨비불 (Kites & Wisps)">
+<meta name="twitter:description" content="지워진 대륙을 백지 지도로 다시 그리는 동양 판타지 도트 RPG.">
+<meta name="twitter:image" content="https://kites-and-wisps.web.app/assets/img/og_1200x630.jpg">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Nanum+Brush+Script&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Nanum+Brush+Script&display=swap"></noscript>
+<link rel="preload" as="image" href="assets/img/hero_village_960.webp" imagesrcset="assets/img/hero_village_960.webp 960w, assets/img/hero_village.webp 1672w" imagesizes="100vw">
+<link rel="stylesheet" href="assets/css/site.css?v=1">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "연과 도깨비불",
+  "alternateName": "Kites & Wisps",
+  "url": "https://kites-and-wisps.web.app/",
+  "inLanguage": ["ko", "en"],
+  "description": "먹물 안개에 지워진 세상을 백지 지도로 다시 그리는 실시간 온라인 동양 판타지 도트 RPG.",
+  "genre": ["MMORPG", "Adventure", "Pixel art"],
+  "gamePlatform": ["iOS", "Android", "PC (Steam)"],
+  "playMode": ["MultiPlayer", "CoOp"],
+  "image": "https://kites-and-wisps.web.app/assets/img/og_1200x630.jpg",
+  "trailer": {
+    "@type": "VideoObject",
+    "name": "연과 도깨비불 오프닝 — 묵으로 그린 이야기",
+    "description": "먹 세 방울에서 대륙이 피어나고 연과 도깨비불이 내려오는 오프닝 시네마틱.",
+    "thumbnailUrl": "https://kites-and-wisps.web.app/assets/img/trailer_poster.webp",
+    "contentUrl": "https://kites-and-wisps.web.app/assets/video/opening_ink_v1.7_720p.mp4",
+    "uploadDate": "2026-11-07",
+    "duration": "PT45S"
+  }
+}
+</script>
+<script>document.documentElement.classList.remove('no-js')</script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<!-- 첫 화면 인트로 시네마틱 (지금은 오프닝 v1.7 — 랜딩 전용 시네마틱이 오면 src만 바꿈) -->
+<div class="intro" id="intro" role="dialog" aria-modal="true" aria-label="인트로 시네마틱" hidden>
+  <video muted playsinline preload="auto" poster="assets/img/trailer_poster.webp">
+    <source src="assets/video/opening_ink_v1.7_720p.mp4" type="video/mp4">
+  </video>
+  <button class="intro-play" data-intro-play>▶ 소리와 함께 보기</button>
+  <div class="intro-ui">
+    <button class="intro-btn" data-intro-sound aria-pressed="false"><span class="on">소리 끄기</span><span class="off">소리 켜기</span></button>
+    <button class="intro-btn" data-intro-skip>건너뛰기 ›</button>
+  </div>
+  <div class="intro-bar" aria-hidden="true"><i></i></div>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/img/logo_ko.webp" alt="연과 도깨비불" width="95" height="30"><span>Kites &amp; Wisps</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">메뉴</button>
+    <nav class="nav" id="nav" aria-label="주 메뉴">
+      <a href="#world">세계</a>
+      <a href="#features">즐길 거리</a>
+      <a href="#regions">나라</a>
+      <a href="#cast">길동무</a>
+      <a href="#shots">화면</a>
+      <a href="#news">소식</a>
+      <a href="#faq">질문</a>
+      <a class="lang" href="en/" hreflang="en" lang="en">English</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- 히어로 -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-bg">
+      <img src="assets/img/hero_village_960.webp" srcset="assets/img/hero_village_960.webp 960w, assets/img/hero_village.webp 1672w" sizes="100vw" alt="" width="1672" height="941" fetchpriority="high">
+    </div>
+    <div class="hero-kite-line" aria-hidden="true"></div>
+    <img class="hero-kite" src="assets/img/kite.webp" alt="" width="360" height="356">
+    <div class="hero-wisp wisp-sprite" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <h1 id="hero-title"><img class="hero-logo" src="assets/img/logo_ko.webp" alt="연과 도깨비불" width="1200" height="380"></h1>
+      <p class="hero-en" lang="en">Kites &amp; Wisps</p>
+      <div class="hero-copy">
+      <p class="hero-tag">먹물 안개에 지워진 세상을,<br>걸어서 다시 그리는 모험</p>
+      <p class="hero-sub">백지 지도 한 장, 바람을 읽는 연, 길을 비추는 도깨비불. 레벨 없이 할 줄 아는 것을 늘려 가며 함께 걷는 동양 판타지 도트 RPG.</p>
+      </div>
+      <div class="cta">
+        <a class="btn btn-seal" href="#trailer">▶ 오프닝 영상 보기</a>
+        <a class="btn" href="#download">출시 소식</a>
+        <a class="btn" href="?intro" data-replay-intro>↺ 인트로 다시 보기</a>
+      </div>
+      <p class="platforms">iOS · Android · Steam 크로스플레이 · 출시일 미정</p>
+    </div>
+  </section>
+
+  <!-- 영상 -->
+  <section class="trailer" id="trailer" aria-labelledby="trailer-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-kicker">오프닝</p>
+        <h2 class="sec-title" id="trailer-title">묵으로 그린 이야기</h2>
+      </div>
+      <div class="video-frame">
+        <video controls preload="none" playsinline poster="assets/img/trailer_poster.webp" width="1280" height="720" aria-describedby="video-note">
+          <source src="assets/video/opening_ink_v1.7_720p.mp4" type="video/mp4">
+                <track kind="subtitles" srclang="en" label="English" src="assets/video/opening_ink_v1.7.en.vtt">
+          영상을 재생할 수 없는 브라우저입니다.
+        </video>
+      </div>
+      <p class="video-note" id="video-note">45초 · 소리 있음 · 한국어 자막 포함(영어 자막 선택 가능) · 나레이션은 AI 합성 음성입니다. 개발 중 영상으로, 출시 때 바뀔 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- 세계관 -->
+  <section id="world" aria-labelledby="world-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-kicker">세계</p>
+        <h2 class="sec-title" id="world-title">세상은 한 장의 그림이다</h2>
+        <div class="brush-rule" aria-hidden="true"></div>
+      </div>
+      <div class="world-grid">
+        <figure class="world-map ink" style="margin:0">
+          <img src="assets/img/world_continents.webp" alt="먹으로 그린 두 대륙과 섬나라. 산과 강, 기와 마을이 안개 사이로 보인다." width="1600" height="900" loading="lazy">
+        </figure>
+        <div class="world-copy">
+          <p>먹할미가 먹으로 그리고 바람할배가 바람으로 띄운 세상, <strong>팔방</strong>. 이름을 받은 것만 그림에 남습니다.</p>
+          <p>수백 년 전 <strong>먹물의 밤</strong>, 세상의 큰 지도와 모든 기록이 먹에 잠겼습니다. 이름을 잃은 땅은 먹물 안개가 되었고, 그 안개 속에서 장난꾸러기 요괴들이 태어납니다.</p>
+          <p>당신은 어느 지도에도 이름이 없는 <strong>유랑자</strong>. 그래서 어디로든 걸을 수 있고, 걸은 곳은 손에 쥔 <strong>백지 지도</strong>에 다시 그려집니다.</p>
+          <p class="quote">“지도는 완성하는 것이 아니라,<br>함께 고쳐 그리는 것.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 핵심 재미 -->
+  <section class="features" id="features" aria-labelledby="feat-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-kicker">즐길 거리</p>
+        <h2 class="sec-title" id="feat-title">숫자보다, 할 줄 아는 것</h2>
+        <p class="sec-lead">“레벨이 낮아서”가 아니라 “헤엄을 못 쳐서” 못 가는 곳. 저 벼랑 위 반짝이는 것, 등반을 올리면 가 볼 수 있습니다.</p>
+      </div>
+      <div class="feat-grid">
+        <article class="feat ink">
+          <span class="seal" aria-hidden="true">遊</span>
+          <h3>걸어서 그리는 백지 지도</h3>
+          <p>걸은 길, 밝힌 이정표, 연을 띄워 내려다본 들판만큼 지도가 채워집니다. 헤엄·등반·연 날리기로 새 길을 엽니다.</p>
+        </article>
+        <article class="feat ink">
+          <span class="seal" aria-hidden="true">品</span>
+          <h3>레벨 없는 스킬 성장</h3>
+          <p>전투·생활·탐험·예술, 그 스킬답게 쓸수록 랭크가 오릅니다. 한 갈래만 파지 않아도 누구든 될 수 있어요.</p>
+          <div class="rank-strip" aria-label="랭크 단계"><span>입문</span><span>9품</span><span>…</span><span>1품</span><span>경지</span></div>
+        </article>
+        <article class="feat ink">
+          <span class="seal" aria-hidden="true">武</span>
+          <h3>자세를 읽는 전투</h3>
+          <p>반응 속도 겨루기보다 상대의 자세를 읽고 받아치는 전투. 터치로도, 게임패드로도 읽히게 만들었습니다.</p>
+        </article>
+        <article class="feat ink">
+          <span class="seal" aria-hidden="true">生</span>
+          <h3>함께 사는 생활</h3>
+          <p>약초를 캐고, 요리하고, 악기를 연주하고, 함께 모닥불에 앉기. 같이 하면 더 좋지만 혼자서도 막히지 않습니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 지역 -->
+  <section id="regions" aria-labelledby="regions-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-kicker">나라</p>
+        <h2 class="sec-title" id="regions-title">팔방의 나라들</h2>
+        <p class="sec-lead">아시아의 옛이야기에서 모티브를 얻은 가상의 나라들입니다. 어느 나라도 악역이 아니고, 모두 각자의 방식으로 세상을 기억합니다.</p>
+      </div>
+      <div class="region-grid">
+        <article class="region">
+          <img src="assets/img/shots/07_wind_meadow.webp" alt="태초의 바람 언덕. 풀밭 사이 흙길 위에 유랑자와 푸른 도깨비불, 나무 이정표가 있다." width="1280" height="720" loading="lazy" class="pixel" style="aspect-ratio:16/9;object-fit:cover;object-position:56% 50%">
+          <div class="region-body">
+            <h3>태초 <small>시작의 나라</small></h3>
+            <p class="motto">처음 온 사람에게 먼저 인사할 것</p>
+            <p>모든 유랑자가 처음 눈뜨는 작은 섬. 팔방에서 가장 밝은 곳에서 걷고, 캐고, 연을 받습니다.</p>
+          </div>
+        </article>
+        <article class="region">
+          <div class="ph" role="img" aria-label="청람 대표 그림 준비 중"><span><b>청람 대표 그림</b>준비 중 · 코덱스 요청 #005-R1</span></div>
+          <div class="region-body">
+            <h3>청람 <small>연의 나라</small></h3>
+            <p class="motto">이름은 불러 줘야 산다</p>
+            <p>소나무 산과 계곡, 기와 마을. 장승과 서낭당이 마을의 이름을 소리로 기억해 온 나라. 유랑자가 첫 연을 받는 곳.</p>
+          </div>
+        </article>
+        <article class="region">
+          <div class="ph" role="img" aria-label="요이시마 대표 그림 준비 중"><span><b>요이시마 대표 그림</b>준비 중 · 코덱스 요청 #005-R2</span></div>
+          <div class="region-body">
+            <h3>요이시마 <small>등불의 나라</small></h3>
+            <p class="motto">등불 아래에서만 보이는 것</p>
+            <p>밤마다 등불을 켜 서로의 섬을 확인해 온 섬나라. 오래된 도구에 깃든 요괴들이 섬의 길을 기억합니다.</p>
+          </div>
+        </article>
+        <article class="region">
+          <div class="ph" role="img" aria-label="홍로 대표 그림 준비 중"><span><b>홍로 대표 그림</b>준비 중 · 코덱스 요청 #005-R3</span></div>
+          <div class="region-body">
+            <h3>홍로 <small>화로의 나라</small></h3>
+            <p class="motto">적어 둔 것만 남는가?</p>
+            <p>큰 화로가 꺼지지 않는 기록의 나라. 기암괴석 사이 대운하, 지워진 책장이 빈칸으로 남은 옛 지리지.</p>
+          </div>
+        </article>
+        <article class="region">
+          <div class="ph" role="img" aria-label="만선항 대표 그림 준비 중"><span><b>만선항 대표 그림</b>준비 중 · 코덱스 요청 #005-R4</span></div>
+          <div class="region-body">
+            <h3>만선항 <small>자유 항구</small></h3>
+            <p class="motto">어느 지도에도 없는 항구</p>
+            <p>먹물의 밤 뒤 세 나라의 배가 처음 다시 만난 곳. 유랑자들이 모여 다음 바다를 고릅니다.</p>
+          </div>
+        </article>
+        <article class="region mystery">
+          <div class="ph dark" role="img" aria-label="중심 그림 준비 중"><span><b>중심 — 먹물 기둥</b>준비 중 · 코덱스 요청 #005-R5</span></div>
+          <div class="region-body">
+            <h3>중심 <small>???</small></h3>
+            <p class="motto">아무도 돌아오지 못한 곳</p>
+            <p>어느 나라 해안에서든 수평선 너머로 보이는 먹물 기둥. 누가, 왜 세상을 지웠을까요?</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 인물 -->
+  <section class="cast" id="cast" aria-labelledby="cast-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-kicker">길동무</p>
+        <h2 class="sec-title" id="cast-title">함께 걷는 이들</h2>
+        <p class="sec-lead">말은 못 해도 반짝이는 불씨, 바람을 읽는 연, 그리고 섬에서 만나는 이웃들.</p>
+      </div>
+      <div class="cast-grid">
+        <article class="who">
+          <div class="who-art"><div class="ph square"><span><b>유랑자</b>그림 준비 중<br>#005-C1</span></div></div>
+          <div><h3>유랑자</h3><p class="role">당신</p><p>어느 지도에도 이름이 없는 사람. 걸은 곳이 곧 내가 됩니다.</p></div>
+        </article>
+        <article class="who">
+          <div class="who-art"><div class="wisp-sprite" aria-hidden="true"></div></div>
+          <div><h3>도깨비불</h3><p class="role">길잡이 동료</p><p>먹할미가 이름을 부를 때 튄 이름 불씨. 숨은 것 근처에서 반짝이고, 함께 걸을수록 자라며 모양이 바뀝니다. 이름은 당신이 지어 줍니다.</p></div>
+        </article>
+        <article class="who">
+          <div class="who-art"><img class="kite" src="assets/img/kite.webp" alt="" width="360" height="356" loading="lazy"></div>
+          <div><h3>연</h3><p class="role">탐험 도구</p><p>높은 곳에서 띄우면 하늘에서 내려다본 만큼 지도가 걷힙니다. 바람의 방향과 세기를 읽어요.</p></div>
+        </article>
+        <article class="who">
+          <div class="who-art"><div class="ph square"><span><b>해솔 할망</b>그림 준비 중<br>#005-C2</span></div></div>
+          <div><h3>해솔 할망</h3><p class="role">태초의 섬지기</p><p>떠난 유랑자들의 이름을 물먹으로 벽에 적어 두는 섬지기. 처음 깨어난 당신을 맞아 줍니다.</p></div>
+        </article>
+        <article class="who">
+          <div class="who-art"><div class="sprite2 sprite-dol" role="img" aria-label="돌엄니 도트 그림"></div></div>
+          <div><h3>돌엄니</h3><p class="role">섬의 큰 멧돼지</p><p>새 유랑자를 보면 반가워서 힘겨루기로 인사합니다. 넘어지면 코를 비비고 물러나요.</p></div>
+        </article>
+        <article class="who">
+          <div class="who-art"><div class="sprite2 sprite-imp" role="img" aria-label="푸른 불씨 꼬마 요괴 도트 그림"></div></div>
+          <div><h3>꼬마 요괴들</h3><p class="role">먹물 안개의 장난꾸러기</p><p>이름 없는 먹이 모양을 흉내 내 태어난 요괴들. 미워할 수 없는 녀석들이 대부분입니다.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 스크린샷 -->
+  <section id="shots" aria-labelledby="shots-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-kicker">화면</p>
+        <h2 class="sec-title" id="shots-title">태초의 하루</h2>
+      </div>
+      <div class="shots-main ink">
+        <img id="shot-main" src="assets/img/shots/01_awakening_shore.webp" alt="깨어나는 해안: 소나무와 벚나무가 선 모래 해안, 이정표 옆에서 유랑자가 눈을 뜬다." width="1280" height="720" loading="lazy">
+      </div>
+      <p class="shots-cap" id="shot-cap" aria-live="polite">깨어나는 해안 — 모든 유랑자는 바닷가 이정표 옆에서 눈을 뜹니다.</p>
+      <ul class="shots-thumbs" aria-label="스크린샷 고르기">
+        <li><button aria-current="true" data-src="assets/img/shots/01_awakening_shore.webp" data-cap="깨어나는 해안 — 모든 유랑자는 바닷가 이정표 옆에서 눈을 뜹니다." data-alt="깨어나는 해안: 소나무와 벚나무가 선 모래 해안, 이정표 옆에서 유랑자가 눈을 뜬다."><img src="assets/img/shots/01_awakening_shore.webp" alt="깨어나는 해안" width="1280" height="720" loading="lazy"></button></li>
+        <li><button data-src="assets/img/shots/07_wind_meadow.webp" data-cap="바람 언덕 — 흙길을 따라 이정표로. 도깨비불이 앞장섭니다." data-alt="바람 언덕: 풀밭 사이 흙길 위의 유랑자와 도깨비불, 나무 이정표."><img src="assets/img/shots/07_wind_meadow.webp" alt="바람 언덕" width="1280" height="720" loading="lazy"></button></li>
+        <li><button data-src="assets/img/shots/03_forest_gathering.webp" data-cap="숲길의 채집 — 약초를 캐면 채집 스킬이 자랍니다." data-alt="숲길의 채집: 침엽수와 고목 사이에서 유랑자가 채집한다."><img src="assets/img/shots/03_forest_gathering.webp" alt="숲길의 채집" width="1280" height="720" loading="lazy"></button></li>
+        <li><button data-src="assets/img/shots/04_village_square.webp" data-cap="태초 마을 광장 — 찻집과 잡화점, 이웃들이 모이는 곳." data-alt="태초 마을 광장: 찻집·잡화점·기와집과 마을 사람들이 있는 돌 광장."><img src="assets/img/shots/04_village_square.webp" alt="태초 마을 광장" width="1280" height="720" loading="lazy"></button></li>
+        <li><button data-src="assets/img/shots/08_stone_tusk_battle.webp" data-cap="돌엄니와의 힘겨루기 — 돌진은 인사, 자세를 읽고 받아치세요." data-alt="돌엄니와의 힘겨루기: 풀밭에서 큰 멧돼지와 유랑자가 마주한다."><img src="assets/img/shots/08_stone_tusk_battle.webp" alt="돌엄니와의 힘겨루기" width="1280" height="720" loading="lazy"></button></li>
+        <li><button data-src="assets/img/shots/09_village_wisps_night.webp" data-cap="도깨비불의 밤 — 밤이 되면 마을에 푸른 불씨들이 떠다닙니다." data-alt="도깨비불의 밤: 등불 켜진 찻집과 정자 사이 광장에 푸른 도깨비불이 떠 있다."><img src="assets/img/shots/09_village_wisps_night.webp" alt="도깨비불의 밤" width="1280" height="720" loading="lazy"></button></li>
+      </ul>
+      <p class="shots-note">개발 중인 실제 게임 그림을 배치해 합성한 화면입니다. 실제 게임 화면과 다를 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- 소식 -->
+  <section id="news" aria-labelledby="news-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-kicker">소식</p>
+        <h2 class="sec-title" id="news-title">개발 일지</h2>
+      </div>
+      <ul class="news-list">
+        <li><time datetime="2026-11-07">2026.11.07</time><div><h3><span class="tag">영상</span>오프닝 시네마틱 「묵으로 그린 이야기」</h3><p>먹 세 방울에서 대륙이 피어나는 45초 오프닝이 완성됐습니다. 국악기로만 만든 음악과 함께 보세요.</p></div></li>
+        <li><time datetime="2026-11-06">2026.11.06</time><div><h3><span class="tag">개발</span>시작의 나라 「태초」 만드는 중</h3><p>모든 유랑자가 처음 눈뜨는 섬의 마을·들판·동물·요괴 그림을 작업하고 있습니다.</p></div></li>
+        <li><time datetime="2026-11-05">2026.11.05</time><div><h3><span class="tag">공지</span>「연과 도깨비불」 개발을 시작합니다</h3><p>레벨 없이 스킬로 성장하는 동양 판타지 도트 RPG. 앞으로 이곳에서 소식을 전합니다.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 다운로드 -->
+  <section class="download" id="download" aria-labelledby="dl-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-kicker">출시</p>
+        <h2 class="sec-title" id="dl-title">곧 만나요</h2>
+        <p class="sec-lead">모바일과 PC에서 한 세계를 함께 걷습니다. 출시일과 사전 등록은 정해지면 이곳에 가장 먼저 알립니다.</p>
+      </div>
+      <div class="store-row">
+        <span class="btn store" aria-disabled="true">App Store<small>준비 중</small></span>
+        <span class="btn store" aria-disabled="true">Google Play<small>준비 중</small></span>
+        <span class="btn store" aria-disabled="true">Steam<small>준비 중</small></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-kicker">질문</p>
+        <h2 class="sec-title" id="faq-title">자주 묻는 질문</h2>
+      </div>
+      <div class="faq">
+        <details><summary>어떤 게임인가요?</summary><p>먹물 안개에 지워진 동양 판타지 세계를 백지 지도로 다시 그려 가는 실시간 온라인 도트 RPG입니다. 탐험이 중심이고, 전투·생활·예술도 함께 즐길 수 있습니다.</p></details>
+        <details><summary>레벨이 정말 없나요?</summary><p>네. 캐릭터 레벨 대신 스킬마다 랭크(입문 → 9품 … 1품 → 경지)가 있습니다. 그 스킬답게 쓸수록 오르고, 새 길을 여는 것도 레벨이 아니라 헤엄·등반 같은 할 줄 아는 것입니다.</p></details>
+        <details><summary>어떤 기기로 할 수 있나요?</summary><p>iOS·Android 모바일과 PC(Steam)를 목표로 하며, 같은 세계에서 함께 플레이(크로스플레이)할 수 있게 만들고 있습니다. 화면은 가로 방향이고 터치와 게임패드를 지원할 예정입니다.</p></details>
+        <details><summary>언제 출시하나요? 사전 등록은요?</summary><p>아직 정해지지 않았습니다. 정해지면 이 페이지의 소식에 가장 먼저 올립니다.</p></details>
+        <details><summary>혼자서도 할 수 있나요?</summary><p>네. 함께하면 더 좋은 것들이 있지만, 파티를 강요하지 않고 혼자서도 막히지 않게 만드는 것이 원칙입니다.</p></details>
+        <details><summary>과금으로 능력치를 살 수 있나요?</summary><p>유료 상품으로 스킬 수련이나 전투력을 직접 올리지 않는 것을 원칙으로 개발하고 있습니다. 자세한 상품 구성은 출시 전에 안내합니다.</p></details>
+        <details><summary>어느 나라 이야기인가요?</summary><p>한국·일본·중국 등 아시아의 옛이야기에서 모티브를 얻은 가상의 나라들입니다. 실제 국가·역사·지명을 그대로 쓰지 않으며, 어느 나라도 악역으로 그리지 않습니다.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <ul class="foot-links">
+          <li><span aria-disabled="true">이용약관 (준비 중)</span></li>
+          <li><span aria-disabled="true">개인정보처리방침 (준비 중)</span></li>
+          <li><span aria-disabled="true">문의 (준비 중)</span></li>
+          <li><a href="en/" hreflang="en" lang="en">English</a></li>
+        </ul>
+        <p class="copy">© 2026 연과 도깨비불 (Kites &amp; Wisps). 개발 중인 게임으로 내용은 바뀔 수 있습니다.</p>
+      </div>
+      <div class="credits">
+        <p>오프닝 음악: 본 저작물은 ‘국립국악원’에서 ‘2022년’ 작성하여 공공누리 제1유형으로 개방한 ‘국악기 디지털 음원(산조가야금·산조대금·해금·장구·꽹과리·징 단음)’을 이용하였으며, 해당 저작물은 <a href="https://www.gugak.go.kr/digitaleum" rel="noopener">국립국악원 국악기 디지털 음원</a>에서 무료로 내려받을 수 있습니다.</p>
+        <p>오프닝 나레이션은 AI 합성 음성입니다. 글꼴: 고운바탕, 나눔손글씨 붓 (SIL Open Font License 1.1).</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="cursor-wisp" aria-hidden="true"></div>
+<script src="assets/js/site.js?v=1" defer></script>
+</body>
+</html>
